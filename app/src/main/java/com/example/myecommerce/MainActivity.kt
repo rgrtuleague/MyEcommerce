@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val products = arrayListOf<Product>()
 
         for (i in 0..100) {
-            products.add(Product("Organic Apple", "http://via.placeholder.com/350/ffff00/ff0000",  1.09))
+            products.add(Product("Dress Shirt #$i", "http://via.placeholder.com/350/ffff00/ff0000",  1.09))
         }
 
         recycle_view.apply {
