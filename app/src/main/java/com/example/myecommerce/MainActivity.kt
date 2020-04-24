@@ -21,7 +21,12 @@ class MainActivity : AppCompatActivity() {
         navigationView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.actionHome -> d("sergio", "Going home")
-                R.id.actionJeans -> d("sergio", "jeans was pressed")
+                R.id.actionJeans -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frameLayout, JeansFragment())
+                        .commit()
+                    d("sergio", "jeans was pressed")
+                }
                 R.id.actionShorts -> d("sergio", "shorts was pressed")
                 R.id.actionSocks -> d("sergio", "socks was pressed")
             }
